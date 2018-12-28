@@ -1,0 +1,34 @@
+{% load static %}
+<html>
+<head>
+<title>Акуна Матата</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="external.css" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body id="altbody">
+<div id="wrapper-header">
+  <div id="header">
+    <h1>Сайт для администраторов батутного центра "Акуна Матата"</h1>
+  </div>
+</div>
+<div id="wrapper-menu">
+  <div id="menu">
+    <ul>
+      <li><a href="http://127.0.0.1:8000/post/new">Зпаланировать мероприятие</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="coub">
+{% for post in posts %}
+<div>
+  <h1><a href="">{{ post.title }}</a></h1>
+  <p>{{ post.text|linebreaksbr }}</p>
+</div>
+{% endfor %}
+</div>
+
+<div id="footer"></a> </div>
+</body>
+</html>
